@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro & Stopwatch (Simple UI)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    h1 { margin: 0; font-size: 22px; }
+
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 10px black;
+    }
+
+    .time {
+      font-size: 40px;
+      margin: 10px 0 20px;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 8px 14px;
+      border: none;
+      background: blue;
+      color: white;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:active { transform: scale(0.97); }
+
+    .row { display: flex; 
+      gap: 10px; 
+      justify-content: center; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Pomodoro Timer</h1>
+  <div class="box">
+      <div class="time" id="pom-time">25:00</div>
+      <div class="row">
+        <button id="pom-start">Start</button>
+        <button id="pom-pause">Pause</button>
+        <button id="pom-reset">Reset</button>
+      </div>
+  </div>
+
+  <h1>Stopwatch</h1>
+  <div class="box">
+      <div class="time" id="sw-time">00:00:00</div>
+      <div class="row">
+        <button id="sw-start">Start</button>
+        <button id="sw-lap">Lap</button>
+        <button id="sw-reset">Reset</button>
+      </div>
+  </div>
+</body>
+</html>
